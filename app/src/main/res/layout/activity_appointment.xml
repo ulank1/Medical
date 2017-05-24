@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.alina.medical.AppointmentActivity">
+
+    <Spinner
+
+        android:layout_margin="5dp"
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Spinner>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+   <Spinner
+        android:visibility="gone"
+       android:layout_margin="5dp"
+       android:id="@+id/spinner_doctor"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+   </Spinner>
+
+<LinearLayout
+    android:visibility="gone"
+    android:id="@+id/line1"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Spinner
+        android:id="@+id/spinner_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Spinner>
+    <EditText
+        android:hint="Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_name"/>
+    <EditText
+        android:hint="Surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_surname"/>
+    <EditText
+        android:inputType="number"
+        android:hint="Phone number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_phone"/>
+<Button
+    android:text="записатся"
+    android:onClick="onClick"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+</LinearLayout>
+</LinearLayout>
