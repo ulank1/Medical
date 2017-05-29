@@ -153,6 +153,7 @@ public class AppointmentActivity extends AppCompatActivity {
             obj.put("name",editName.getText().toString());
             obj.put("surname",editSurname.getText().toString());
             obj.put("number",editPhone.getText().toString());
+            obj.put("ison","yes");
 
             Log.e("TAG", "asd");
             if (bool){
@@ -377,7 +378,7 @@ public class AppointmentActivity extends AppCompatActivity {
 
             try {
 
-                URL url = new URL("https://med-schedule.herokuapp.com/api/v1/search/?format=json&&doctor="+idDoc.get(spinnerDoctor.getSelectedItemPosition()-1)+"&&data="+date);
+                URL url = new URL("https://med-schedule.herokuapp.com/api/v1/search/?format=json&&doctor="+idDoc.get(spinnerDoctor.getSelectedItemPosition()-1)+"&&data="+date+"&&ison=yes");
 
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("GET");

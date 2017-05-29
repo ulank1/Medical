@@ -154,7 +154,7 @@ public class ReportActivity extends AppCompatActivity {
 
             try {
                 Log.e("TAGG",idList.size()+" "+spinner.getSelectedItemPosition());
-                URL url = new URL("https://med-schedule.herokuapp.com/api/v1/search/?format=json&&doctor="+idList.get(spinner.getSelectedItemPosition()-1)+"&&data="+data);
+                URL url = new URL("https://med-schedule.herokuapp.com/api/v1/search/?format=json&&doctor="+idList.get(spinner.getSelectedItemPosition()-1)+"&&data="+data+"&&ison=yes");
 
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("GET");
@@ -199,6 +199,8 @@ public class ReportActivity extends AppCompatActivity {
                     appointment.setName(menu.getString("name")+" "+menu.getString("surname"));
                     appointment.setPhone(menu.getString("number"));
                     appointment.setTime(menu.getString("time"));
+                    appointment.setId(menu.getString("id"));
+
                     arrayList.add(appointment);
 
 
